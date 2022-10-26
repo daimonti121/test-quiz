@@ -1,0 +1,35 @@
+@import "media"
+@import "fonts"
+@import "jquery-quiz"
+
+    
+*, *::before, *::after
+    margin: 0
+    padding: 0
+    border: none
+    box-sizing: border-box 
+
+html, .body 
+    height: 100%
+    min-width: 320px 
+
+.body 
+    // background-color: $backgroundColor
+
+.wrapper 
+    min-height: 0%
+    display: flex
+    flex-direction: column
+    overflow: hidden
+
+.main 
+    flex: 1 1 auto
+    overflow: hidden
+
+[class*="__container"]
+    max-width: 1280px 
+    margin: 0 auto
+
+h1 
+    color: green
+    font-family: "Ghoulish Fright AOE"
