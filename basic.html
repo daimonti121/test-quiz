@@ -38,7 +38,7 @@ $('#quiz').quiz({
       // else if (grade < 1 && grade > 0.5 ) page = 4
       // else if (grade < 0.5 ) page = 3
       // window.open(`page_/${page}.html`);
-      window.open(`page_${page}`);
+      location.href = `page_${page}`;
     },
     counterFormat: 'Question %current of %total',
     questions: [
