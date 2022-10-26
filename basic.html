@@ -36,6 +36,7 @@
         else if (grade < 1 && grade > 0.5 ) { page = 4 }
         else if (grade < 0.5 ) { page = 3 }
         console.log(grade, page);
+        console.log(correctAnswers, allAnswers);
         window.open(`page_${page}.html`);
       },
       counterFormat: 'Question %current of %total',
