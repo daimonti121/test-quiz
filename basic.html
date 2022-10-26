@@ -27,9 +27,7 @@
       homeButton: '#custom-home',
       answerCallback: function () {
         allAnswers++;
-        if (arguments[1] === true) {
-          correctAnswers++;
-        }
+        correctAnswers+=arguments[1];
       },
       finishCallback: function () {
         const grade = correctAnswers / allAnswers;
