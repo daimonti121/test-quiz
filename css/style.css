@@ -231,6 +231,9 @@ h1 {
     display: block;
     margin: 0 auto; }
 
+.display-none {
+  display: none; }
+
 @font-face {
   font-family: Ghoulish Fright AOE;
   src: url("../fonts/GhoulFriAOE.ttf"); }
