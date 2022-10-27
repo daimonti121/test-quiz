@@ -52,7 +52,10 @@
           <a href="#" id="quiz-start-btn" class="quiz-button">Start</a>
           <img src="img/question-back.png">
         </p>        
-      </div>
+      </div>      
+    </div>
+    <div id="quesions__img" class="display-none">
+      <img src="img/question-back-two.png" alt="item">
     </div>
   </div>  
 </div>
@@ -62,6 +65,18 @@
 <script>
   let allAnswers = 0;
   let correctAnswers = 0; 
+
+  $('#quiz-start-btn').click(function (e) {
+    $('#quesions__img').addClass('display-block');
+    }
+  );
+
+  $('#quiz-finish-btn').click(function (e) {
+    console.log("work");
+    $('#quesions__img').removeClass('display-block');
+    }
+  );
+  
 
   $('#quiz').quiz({
       resultsScreen: '#results-screen',
