@@ -35,6 +35,10 @@
     color: #FFFFFF;
     margin-bottom: 70px;
   }
+
+  #quiz-results {
+    display: none;
+  }
 </style>
 <body class="body-questions">
 <div class="quesions">
@@ -89,7 +93,6 @@
         } else if (grade <= 0.1) {
           page = 0
         }
-        console.log(grade, page);
         location.href=`page_${page}.html`;
       },
       counterFormat: 'Question %current of %total',
