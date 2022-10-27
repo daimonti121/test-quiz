@@ -5,19 +5,41 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <style>
-  /* #quiz-restart-btn {
+  #quiz-restart-btn {
     display: none !important;
-  } */
+  }
+  
+  .question-container {
+    position: relative;
+  }
+
+  .question {
+    font-family: 'Ghoulish Fright AOE';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 106%;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-bottom: 70px;
+  }
 </style>
-<body>
-<div id="quiz">
-  <div id="quiz-header">
-    <h1>Basic Quiz Demo</h1>
-    <p><a id="quiz-home-btn">Home</a></p>
-  </div>
-  <div id="quiz-start-screen">
-    <p><a href="#" id="quiz-start-btn" class="quiz-button">Start</a></p>
-  </div>
+<body class="body-questions">
+<div class="quesions">
+  <div class="quesions__container">
+    <div id="quiz">
+      <div id="quiz-header">
+        <img src="img/question-back.png">
+      </div>
+      <div id="quiz-start-screen">
+        <p>
+          <a href="#" id="quiz-start-btn" class="quiz-button">Start</a>
+          <img src="img/question-back.png">
+        </p>        
+      </div>
+    </div>
+  </div>  
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
@@ -29,6 +51,7 @@
   $('#quiz').quiz({
       resultsScreen: '#results-screen',
       counter: false,
+      counterFormat: false,
       homeButton: '#custom-home',
       answerCallback: function () {
         allAnswers++
@@ -50,7 +73,7 @@
           page = 3
         } else if (grade <= 0.4 && grade > 0.2) {
           page = 2
-        } else if (grade <= 0.2) {
+        } else if (grade <= 0.2 && grade > 0.1) {
           page = 1
         } else if (grade <= 0.1) {
           page = 0
@@ -60,59 +83,65 @@
       },
       counterFormat: 'Question %current of %total',
       questions: [
-        {
-          'q': 'A sample question?',
+        { 
+          'q': '<img style="position: relative; left: calc(50% - 456px);" src="../img/question-one.png"> <br> <p style="font-family: Ghoulish Fright AOE; font-style: normal; font-weight: 400; font-size: 30px; line-height: 106%; text-align: center; text-transform: uppercase; color: #FFFFFF; margin-bottom: 70px;">In what country did Halloween come from?</p> <h3 style="position: absolute; top: -222px; transform: translate(117%, 0px); font-family: Ghoulish Fright AOE; font-style: normal; font-weight: 400; font-size: 70px; line-height: 106%; text-align: center; text-transform: uppercase; background: linear-gradient(90deg, rgba(236, 233, 230, 0.93) 0%, rgba(255, 255, 255, 0.93) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Question 1</h3>',
           'options': [
-            'Answer 1',
-            'Answer 2',
-            'Answer 3',
-            'Answer 4'
-          ],
-          'correctIndex': 1,
-          'correctResponse': 'Custom correct response.',
-          'incorrectResponse': 'Custom incorrect response.'
-        },
-        {
-          'q': 'What is this image? <img src="https://picsum.photos/100/100">',
-          'options': [
-            'Answer 1',
-            'Answer 2'
-          ],
-          'correctIndex': 1,
-          'correctResponse': 'Custom correct response.',
-          'incorrectResponse': 'Custom incorrect response.'
-        },
-        {
-          'q': 'Which image is the correct answer?',
-          'options': [
-            '<img src="https://picsum.photos/100/100">',
-            '<img src="https://picsum.photos/100/100">'
+            '<p>a) Ireland</p>',
+            '<p>b) australia</p>',
+            '<p>c) germany</p>',
+            '<p>d) netherlands</p>'
           ],
           'correctIndex': 0,
-          'correctResponse': 'Custom correct response.',
-          'incorrectResponse': 'Custom incorrect response.'
+          'correctResponse': 'Halloween had its origins in the festival of Samhain among the Celts of ancient Britain and Ireland. On the day corresponding to November 1 on contemporary calendars, the new year was believed to begin. That date was considered the beginning of the winter period, the date on which the herds were returned from pasture and land tenures were renewed. During the Samhain festival the souls of those who had died were believed to return to visit their homes, and those who had died during the year were believed to journey to the otherworld. <img style="position: absolute; bottom: 637px;left: calc(50% - 456px);" src="../img/question-two.png">',
+          'incorrectResponse': 'Halloween had its origins in the festival of Samhain among the Celts of ancient Britain and Ireland. On the day corresponding to November 1 on contemporary calendars, the new year was believed to begin. That date was considered the beginning of the winter period, the date on which the herds were returned from pasture and land tenures were renewed. During the Samhain festival the souls of those who had died were believed to return to visit their homes, and those who had died during the year were believed to journey to the otherworld. <img style="position: absolute; bottom: 637px;left: calc(50% - 456px);" src="../img/question-two.png">'
         },
         {
-          'q': 'A sample question?',
+          'q': '<img style="position: relative; left: calc(50% - 456px);" src="../img/question-three.png"> <br> <p style="font-family: Ghoulish Fright AOE; font-style: normal; font-weight: 400; font-size: 30px; line-height: 106%; text-align: center; text-transform: uppercase; color: #FFFFFF; margin-bottom: 70px;">The pumpkin - lantern everyone makes for Halloween is called Jack`s Lantern. But who is this Jack?</p> <h3 style="position: absolute; top: -222px; transform: translate(113%, 0px); font-family: Ghoulish Fright AOE; font-style: normal; font-weight: 400; font-size: 70px; line-height: 112%; text-align: center; text-transform: uppercase; background: linear-gradient(90deg, rgba(236, 233, 230, 0.93) 0%, rgba(255, 255, 255, 0.93) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Question 2</h3>',
           'options': [
-            'Answer 1',
-            'Answer 2'
+            '<p>a) PRIEST</p>',
+            '<p>b) Blacksmith</p>',
+            '<p>c) Farmer</p>',
+            '<p>D) Necromancer</p>'
           ],
-          'correctIndex': 1,
-          'correctResponse': 'Custom correct response.',
-          'incorrectResponse': 'Custom incorrect response.'
+          'correctIndex': 0,
+          'correctResponse': 'People have been making jack-o’-lanterns at Halloween for centuries. The practice originated from an Irish myth about an Irish blacksmith called `Stingy Jack.` According to the story, Stingy Jack invited the Devil to have a drink with him. True to his name, Stingy Jack didn’t want to pay for his drink, so he convinced the Devil to turn himself into a coin that Jack could use to buy their drinks. Once the Devil did so, Jack decided to keep the money and put it into his pocket next to a silver cross, which prevented the Devil from changing back into his original form. <br> <br> <br> Jack eventually freed the Devil, under the condition that he would not bother Jack for one year and that, should Jack die, he would not claim his soul. The next year, Jack again tricked the Devil into climbing into a tree to pick a piece of fruit. While he was up in the tree, Jack carved a sign of the cross into the tree’s bark so that the Devil could not come down until the Devil promised Jack not to bother him for ten more years. <br> <br> <br> Soon after, Jack died. As the legend goes, God would not allow such an unsavory figure into heaven. The Devil, upset by the trick Jack had played on him and keeping his word not to claim his soul, would not allow Jack into hell. He sent Jack off into the dark night with only a burning coal to light his way. Jack put the coal into a carved-out turnip and has been roaming the Earth with ever since. The Irish began to refer to this ghostly figure as “Jack of the Lantern,” and then, simply “Jack O’Lantern.” <img style="position: absolute; bottom: 944px;left: calc(50% - 456px);" src="../img/question-foor.png">',
+          'incorrectResponse': 'People have been making jack-o’-lanterns at Halloween for centuries. The practice originated from an Irish myth about an Irish blacksmith called `Stingy Jack.` According to the story, Stingy Jack invited the Devil to have a drink with him. True to his name, Stingy Jack didn’t want to pay for his drink, so he convinced the Devil to turn himself into a coin that Jack could use to buy their drinks. Once the Devil did so, Jack decided to keep the money and put it into his pocket next to a silver cross, which prevented the Devil from changing back into his original form. <br> <br> <br> Jack eventually freed the Devil, under the condition that he would not bother Jack for one year and that, should Jack die, he would not claim his soul. The next year, Jack again tricked the Devil into climbing into a tree to pick a piece of fruit. While he was up in the tree, Jack carved a sign of the cross into the tree’s bark so that the Devil could not come down until the Devil promised Jack not to bother him for ten more years. <br> <br> <br> Soon after, Jack died. As the legend goes, God would not allow such an unsavory figure into heaven. The Devil, upset by the trick Jack had played on him and keeping his word not to claim his soul, would not allow Jack into hell. He sent Jack off into the dark night with only a burning coal to light his way. Jack put the coal into a carved-out turnip and has been roaming the Earth with ever since. The Irish began to refer to this ghostly figure as “Jack of the Lantern,” and then, simply “Jack O’Lantern.” <img style="position: absolute; bottom: 944px;left: calc(50% - 456px);" src="../img/question-foor.png">'
         },
         {
-          'q': 'A sample question?',
+          'q': '<img style="position: relative; left: calc(50% - 456px);" src="../img/question-three-1.png"> <br> <p style="font-family: Ghoulish Fright AOE; font-style: normal; font-weight: 400; font-size: 30px; line-height: 106%; text-align: center; text-transform: uppercase; color: #FFFFFF; margin-bottom: 70px;">Which starting hand in poker is called the "dead man`s hand?"</p> <h3 style="position: absolute; top: -222px; transform: translate(113%, 0px); font-family: Ghoulish Fright AOE; font-style: normal; font-weight: 400; font-size: 70px; line-height: 106%; text-align: center; text-transform: uppercase; background: linear-gradient(90deg, rgba(236, 233, 230, 0.93) 0%, rgba(255, 255, 255, 0.93) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Question 3</h3>',
           'options': [
-            'Answer 1',
-            'Answer 2',
-            'Answer 3',
-            'Answer 4'
+            '<img style="display: block; margin: 0 auto;" src="../img/card-1.png">',
+            '<img style="display: block; margin: 0 auto;" src="../img/card-2.png">',
+            '<img style="display: block; margin: 0 auto;" src="../img/card-3.png">',
+            '<img style="display: block; margin: 0 auto;" src="../img/card-4.png">'
           ],
           'correctIndex': 3,
-          'correctResponse': 'Custom correct response.',
-          'incorrectResponse': 'Custom incorrect response.'
+          'correctResponse': '<img style="display: block; margin: 0 auto;" src="../img/card-right.png"> <br> <br> <br> <p style="text-align: center;">legend says that Wild Bill Hickock`s hands were holding the AA88 combination when he was shot</p> <img style="position: absolute; bottom: 1093px;left: calc(50% - 456px);" src="../img/question-three-2.png">',
+          'incorrectResponse': '<img style="display: block; margin: 0 auto;" src="../img/card-right.png"> <br> <br> <br> <p style="text-align: center;">legend says that Wild Bill Hickock`s hands were holding the AA88 combination when he was shot</p> <img style="position: absolute; bottom: 1093px;left: calc(50% - 456px);" src="../img/question-three-2.png">'
+        },
+        {
+          'q': '<img style="position: relative; left: calc(50% - 456px);" src="../img/question-foor-1.png"> <br> <p style="font-family: Ghoulish Fright AOE; font-style: normal; font-weight: 400; font-size: 30px; line-height: 106%; text-align: center; text-transform: uppercase; color: #FFFFFF; margin-bottom: 70px;">The pumpkin - lantern everyone makes for Halloween is called Jack`s Lantern. But who is this Jack?</p> <h3 style="position: absolute; top: -222px; transform: translate(113%, 0px); font-family: Ghoulish Fright AOE; font-style: normal; font-weight: 400; font-size: 70px; line-height: 112%; text-align: center; text-transform: uppercase; background: linear-gradient(90deg, rgba(236, 233, 230, 0.93) 0%, rgba(255, 255, 255, 0.93) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Question 4</h3>',
+          'options': [
+            '<p>A) one armed bandit</p>',
+            '<p>B) Big Bertha</p>',
+            '<p>C) jack hammer</p>',
+            '<p>D) liberty bell</p>'
+          ],
+          'correctIndex': 0,
+          'correctResponse': '<p style="text-align: center;">Invented in 1898 in San Francisco, the slot machine took almost a century to cross the Atlantic. They were only authorised in France in the late 1980s. More commonly known under their nickname "one-armed bandit", these amusement machines are now undergoing a digital revolution. With the internet, jackpots are sky-high. <br> <br> <br> Is the end nigh for one-armed bandits? Perhaps – at least in their current form. In the future, a tablet could be used as an interface without doing away with the unique thrill of the Slot Machine. In over a century of existence, it has certainly seen its fair share of changes.</p>',
+          'incorrectResponse': '<p style="text-align: center;">Invented in 1898 in San Francisco, the slot machine took almost a century to cross the Atlantic. They were only authorised in France in the late 1980s. More commonly known under their nickname "one-armed bandit", these amusement machines are now undergoing a digital revolution. With the internet, jackpots are sky-high. <br> <br> <br> Is the end nigh for one-armed bandits? Perhaps – at least in their current form. In the future, a tablet could be used as an interface without doing away with the unique thrill of the Slot Machine. In over a century of existence, it has certainly seen its fair share of changes.</p>'
+        },
+        {
+          'q': '<img style="position: relative; left: calc(50% - 456px);" src="../img/question-one.png"> <br> <p style="font-family: Ghoulish Fright AOE; font-style: normal; font-weight: 400; font-size: 30px; line-height: 106%; text-align: center; text-transform: uppercase; color: #FFFFFF; margin-bottom: 70px;">In what country did Halloween come from?</p> <h3 style="position: absolute; top: -222px; transform: translate(113%, 0px); font-family: Ghoulish Fright AOE; font-style: normal; font-weight: 400; font-size: 70px; line-height: 106%; text-align: center; text-transform: uppercase; background: linear-gradient(90deg, rgba(236, 233, 230, 0.93) 0%, rgba(255, 255, 255, 0.93) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Question 5</h3>',
+          'options': [
+            '<p>A) usa</p>',
+            '<p>B) france</p>',
+            '<p>C) italy</p>',
+            '<p>D) malta</p>'
+            ],
+          'correctIndex': 2,
+          'correctResponse': '<p style="text-align: center">It was in Venice in the mid-17th century that the first legal casino opened. It was called Il Ridotto. <br> <br> <br> It was here in Italy that the term "casino" was created. In Italian, the word means "small house".</p> <img style="position: absolute; bottom: 637px;left: calc(50% - 456px);" src="../img/question-two.png">',
+          'incorrectResponse': 'Halloween had its origins in the festival of Samhain among the Celts of ancient Britain and Ireland. On the day corresponding to November 1 on contemporary calendars, the new year was believed to begin. That date was considered the beginning of the winter period, the date on which the herds were returned from pasture and land tenures were renewed. During the Samhain festival the souls of those who had died were believed to return to visit their homes, and those who had died during the year were believed to journey to the otherworld. <img style="position: absolute; bottom: 637px;left: calc(50% - 456px);" src="../img/question-two.png">'
         }
       ]
     });

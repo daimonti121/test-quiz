@@ -1,0 +1,105 @@
+@import "media"
+@import "fonts"
+
+.quiz-container
+    max-width: 910px
+    width: 100%
+
+#quiz-buttons a, .quiz-container .quiz-button
+    font-family: 'Ghoulish Fright AOE'
+    font-style: normal
+    font-weight: 400
+    font-size: 35px
+    line-height: 106%
+    text-align: center
+    text-transform: uppercase
+    color: #FFFFFF
+    text-decoration: none
+    padding: 10px 50px
+    background: linear-gradient(90deg, #E44D26 0%, #F16529 100%)
+    border-radius: 30px
+    display: block
+    max-width: 260px
+    width: 100%
+    transition: 0.5s
+    margin: 0 auto
+    &:hover
+        background: linear-gradient(90deg, #F85032 0%, #E73827 100%)
+        border-radius: 30px
+
+.answers 
+    list-style: none
+    padding: 0
+    display: flex
+    flex-wrap: wrap
+    margin-bottom: 20px
+    li
+        width: 47%
+        height: auto
+        margin: 10px
+
+.answers a p
+    font-family: 'Ghoulish Fright AOE'
+    font-style: normal
+    font-weight: 400
+    font-size: 30px
+    line-height: 106%
+    text-align: center
+    text-transform: uppercase
+    color: #FFFFFF
+    background: transparent
+    border: 1px solid #F59000
+    transition: all 0.3s
+    padding: 17px
+    height: 70px !important
+    &:hover
+        filter: drop-shadow(0px 1px 1px #F59000) drop-shadow(-1px 0px 1px #F59000) drop-shadow(1px 0px 1px #F59000) 
+
+.answers a 
+    background-color: transparent
+
+.question 
+    font-family: 'Ghoulish Fright AOE'
+    font-style: normal
+    font-weight: 400
+    font-size: 30px
+    line-height: 106%
+    text-align: center
+    text-transform: uppercase
+    color: #FFFFFF
+    margin-bottom: 70px
+
+.answers a.correct 
+    background: transparent
+
+.answers a.incorrect
+    background: transparent
+
+.answers a.correct p
+    background: transparent
+    border: 1px solid #098223
+    filter: drop-shadow(0px 1px 1px #098223) drop-shadow(-1px 0px 1px #098223) drop-shadow(1px 0px 1px #098223)
+
+.answers a.incorrect p
+    border: 1px solid #FA0A0A
+    background: transparent
+    filter: drop-shadow(0px 1px 1px #FA0A0A) drop-shadow(-1px 0px 1px #FA0A0A) drop-shadow(1px 0px 1px #FA0A0A)
+    
+#quiz-controls 
+    background: transparent
+
+.body-questions 
+    background: url('../img/backgraund-quiz.png') 50% 10%/auto no-repeat
+    background-color: #171616
+
+#quiz-response
+    font-family: 'Calibri'
+    font-style: normal
+    font-weight: 400
+    font-size: 20px
+    line-height: 106%
+    text-align: left
+    color: #FFFFFF
+    margin: 80px 0px
+    position: relative
+
