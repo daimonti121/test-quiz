@@ -4,6 +4,11 @@
   <title>jQuery Quiz</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
+<style>
+  #quiz-restart-btn {
+    display: none !important;
+  }
+</style>
 <body>
 <div id="quiz">
   <div id="quiz-header">
@@ -26,18 +31,30 @@
       counter: false,
       homeButton: '#custom-home',
       answerCallback: function () {
-        allAnswers++;
-        correctAnswers+=arguments[1];
+        allAnswers++
+        if (arguments.length === 2 && arguments[1]) correctAnswers++
+        if (
+          arguments.length === 3 &&
+          arguments[2].correctIndex === arguments[1]
+        )
+          correctAnswers++
       },
       finishCallback: function () {
-        const grade = correctAnswers / allAnswers;
-        let page = 1;
-        if (grade == 1 ) { page = 5; }
-        else if (grade < 1 && grade > 0.5 ) { page = 4 }
-        else if (grade < 0.5 ) { page = 3 }
+        const grade = correctAnswers / allAnswers
+        let page = 1
+        if (grade == 1) {
+          page = 5
+        } else if (grade < 1 && grade >= 0.5) {
+          page = 4
+        } else if (grade < 0.5 && grade >= 0.4 ) {
+          page = 3
+        } else if (grade < 0.4 && grade >= 0.3) {
+          page = 2
+        } else if (grade < 0.3) {
+          page = 1
+        }
         console.log(grade, page);
-        console.log(correctAnswers, allAnswers);
-        window.open(`page_${page}.html`);
+        window.open(`page_${page}.html`)
       },
       counterFormat: 'Question %current of %total',
       questions: [
