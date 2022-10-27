@@ -1,6 +1,17 @@
 @font-face {
   font-family: Ghoulish Fright AOE;
   src: url("../fonts/GhoulFriAOE.ttf"); }
+@font-face {
+  font-family: Calibri;
+  src: url("../fonts/calibri.ttf");
+  font-weight: regular; }
+@font-face {
+  font-family: Calibri;
+  src: url("../fonts/calibri_bold.ttf");
+  font-weight: bold; }
+@font-face {
+  font-family: Proxima Nova;
+  src: url("../fonts/ProximaNova-Regular.woff"); }
 body {
   background: #0c1514;
   color: #fff; }
@@ -88,9 +99,18 @@ h1 {
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
 
-html, .body {
-  height: 100%;
-  min-width: 320px; }
+.body {
+  background: url("../img/backgraund-main.png") 50% 0/auto no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #000000;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
 
 .wrapper {
   min-height: 0%;
@@ -112,9 +132,143 @@ html, .body {
 [class*="__container"] {
   max-width: 1280px;
   margin: 0 auto; }
+  @media (max-width: 1170px) {
+    [class*="__container"] {
+      margin: 0 20px; } }
 
 h1 {
+  margin-top: 147px;
   color: green;
   font-family: "Ghoulish Fright AOE"; }
+
+.box {
+  max-width: 1050px;
+  width: 100%; }
+  .box .backcolor {
+    background: #000000;
+    border: 1px solid #000000;
+    -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 6px; }
+  .box h1 {
+    font-family: "Ghoulish Fright AOE";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 150px;
+    line-height: 106%;
+    text-align: center;
+    text-transform: uppercase;
+    background: -webkit-gradient(linear, left top, right top, from(rgba(236, 233, 230, 0.93)), to(rgba(255, 255, 255, 0.93)));
+    background: linear-gradient(90deg, rgba(236, 233, 230, 0.93) 0%, rgba(255, 255, 255, 0.93) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent; }
+    @media (max-width: 768px) {
+      .box h1 {
+        font-size: 60px;
+        margin-top: 50px; } }
+  .box h2 {
+    font-family: "Ghoulish Fright AOE";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 70px;
+    line-height: 106%;
+    text-align: center;
+    text-transform: uppercase;
+    background: -webkit-gradient(linear, left top, right top, from(rgba(236, 233, 230, 0.93)), to(rgba(255, 255, 255, 0.93)));
+    background: linear-gradient(90deg, rgba(236, 233, 230, 0.93) 0%, rgba(255, 255, 255, 0.93) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    margin-top: 206px; }
+    @media (max-width: 768px) {
+      .box h2 {
+        margin-top: 40px;
+        font-size: 40px; } }
+  .box .info-block-one {
+    margin-top: 206px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    @media (max-width: 768px) {
+      .box .info-block-one {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+            -ms-flex-direction: column-reverse;
+                flex-direction: column-reverse;
+        margin-top: 40px;
+        text-align: center; } }
+    .box .info-block-one p {
+      font-family: "Proxima Nova";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 25px;
+      line-height: 106%;
+      color: #FFFFFF;
+      max-width: 480px;
+      width: 100%; }
+  .box .info-block-two {
+    margin-top: 106px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    @media (max-width: 768px) {
+      .box .info-block-two {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        margin-top: 0px;
+        text-align: center; } }
+    .box .info-block-two p {
+      max-width: 480px;
+      width: 100%;
+      font-family: "Proxima Nova";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 25px;
+      line-height: 106%;
+      color: #FFFFFF; }
+  .box .button {
+    font-family: "Ghoulish Fright AOE";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 45px;
+    line-height: 106%;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 12px 70px;
+    background: -webkit-gradient(linear, left top, right top, from(#E44D26), to(#F16529));
+    background: linear-gradient(90deg, #E44D26 0%, #F16529 100%);
+    border-radius: 30px;
+    display: block;
+    max-width: 320px;
+    width: 100%;
+    margin: 120px auto;
+    -webkit-transition: 0.5s;
+    transition: 0.5s; }
+    .box .button:hover {
+      background: -webkit-gradient(linear, left top, right top, from(#F85032), to(#E73827));
+      background: linear-gradient(90deg, #F85032 0%, #E73827 100%);
+      border-radius: 30px; }
+    @media (max-width: 768px) {
+      .box .button {
+        margin: 100px auto; } }
 
 /*# sourceMappingURL=style.css.map */
