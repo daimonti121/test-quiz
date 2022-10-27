@@ -561,4 +561,17 @@ h1 {
       .box .button {
         margin: 100px auto; } }
 
+::-webkit-scrollbar {
+  height: 10px;
+  width: 6px;
+  background: #000; }
+
+::-webkit-scrollbar-thumb {
+  background: #F59000;
+  -webkit-border-radius: 1ex;
+  -webkit-box-shadow: 0px 1px 2px #F59000; }
+
+::-webkit-scrollbar-corner {
+  background: #000; }
+
 /*# sourceMappingURL=style.css.map */
