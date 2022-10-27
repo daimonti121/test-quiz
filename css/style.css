@@ -424,7 +424,7 @@ h1 {
   border-radius: 6px; }
   @media (max-width: 1170px) {
     .quesions__container {
-      margin: 0 20px; } }
+      margin: 200px auto; } }
 
 h1 {
   margin-top: 147px;
