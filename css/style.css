@@ -308,7 +308,7 @@ h1 {
       width: 95%; } }
 
   .win__baner {
-    margin-top: 35px; }
+    width: 100%; }
     .win__baner img {
       display: block;
       width: 95%;
