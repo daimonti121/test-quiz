@@ -202,7 +202,7 @@ h1 {
   background: transparent; }
 
 .body-questions {
-  background: url("../img/backgraund-quiz.png") 50% 10%/auto no-repeat;
+  background: url("../img/backgraund-quiz.png") 50% 10%/cover no-repeat;
   background-color: #171616; }
 
 #quiz-response {
@@ -274,36 +274,11 @@ h1 {
   font-family: Proxima Nova;
   src: url("../fonts/ProximaNova-Regular.woff"); }
 .win {
-  background: url("../img/backgraund-quiz.png") 50% 10%/auto no-repeat;
-  background-color: #171616;
-  margin-bottom: 200px; }
+  background: url("../img/backgraund-quiz.png") 50% 10%/cover no-repeat;
+  background-color: #171616; }
   @media (max-width: 600px) {
     .win {
       margin-bottom: 50px; } }
-  .win h2 {
-    display: block;
-    margin: 162px auto;
-    text-align: center;
-    font-family: "Ghoulish Fright AOE";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 70px;
-    line-height: 106%;
-    text-align: center;
-    text-transform: uppercase;
-    background: -webkit-gradient(linear, left top, right top, from(rgba(236, 233, 230, 0.93)), to(rgba(255, 255, 255, 0.93)));
-    background: linear-gradient(90deg, rgba(236, 233, 230, 0.93) 0%, rgba(255, 255, 255, 0.93) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-fill-color: transparent; }
-    @media (max-width: 979px) {
-      .win h2 {
-        margin: 102px auto; } }
-  @media (max-width: 979px) and (max-width: 600px) {
-    .win h2 {
-      margin: 50px auto; } }
-
   .win .win__container {
     max-width: 950px;
     width: 100%;
@@ -323,11 +298,11 @@ h1 {
             box-shadow: 0px 4px 44px 1px rgba(163, 5, 5, 0.12);
     border-radius: 6px;
     max-width: 1280px;
-    margin: 0 auto; }
+    margin: 100px auto; }
     @media (max-width: 1170px) {
       .win .win__container {
         max-width: 950px;
-        margin: 0 auto; } }
+        margin: 100px auto; } }
   @media (max-width: 1170px) and (max-width: 979px) {
     .win .win__container {
       width: 95%; } }
@@ -409,14 +384,14 @@ h1 {
     margin-top: 50px;
     display: block;
     padding: 16px 0px;
-    background: -webkit-gradient(linear, left top, right top, from(#E44D26), to(#F16529));
-    background: linear-gradient(90deg, #E44D26 0%, #F16529 100%);
     border-radius: 30px;
     max-width: 264px;
-    width: 100%; }
-    .win__link:hover {
-      background: -webkit-gradient(linear, left top, right top, from(#F85032), to(#E73827));
-      background: linear-gradient(90deg, #F85032 0%, #E73827 100%); }
+    width: 100%;
+    background-color: #F85032;
+    -webkit-transition: background-color 0.5s;
+    transition: background-color 0.5s; }
+  .win__link:hover {
+    background-color: #0B650B; }
   .win__img-footer {
     margin-top: 75px; }
     @media (max-width: 600px) {
@@ -431,7 +406,7 @@ h1 {
           box-sizing: border-box; }
 
 .body {
-  background: url("../img/backgraund-main.png") 50% 0/auto no-repeat;
+  background: url("../img/backgraund-main.png") 50% 0/cover no-repeat;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

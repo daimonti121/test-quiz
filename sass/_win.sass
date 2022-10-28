@@ -2,32 +2,10 @@
 @import "fonts"
 
 .win
-    background: url('../img/backgraund-quiz.png') 50% 10%/auto no-repeat
+    background: url('../img/backgraund-quiz.png') 50% 10%/cover no-repeat
     background-color: #171616
-    margin-bottom: 200px
     +_600
         margin-bottom: 50px
-    h2 
-        display: block
-        margin: 162px auto
-        text-align: center
-        font-family: 'Ghoulish Fright AOE'
-        font-style: normal
-        font-weight: 400
-        font-size: 70px
-        line-height: 106%
-        text-align: center
-        text-transform: uppercase
-        background: linear-gradient(90deg, rgba(236, 233, 230, 0.93) 0%, rgba(255, 255, 255, 0.93) 100%)
-        -webkit-background-clip: text
-        -webkit-text-fill-color: transparent
-        background-clip: text
-        text-fill-color: transparent
-        +_979
-            margin: 102px auto
-            +_600
-                margin: 50px auto
-
     .win__container
         max-width: 950px
         width: 100%
@@ -39,10 +17,10 @@
         box-shadow: 0px 4px 44px 1px rgba(163, 5, 5, 0.12)
         border-radius: 6px
         max-width: 1280px 
-        margin: 0 auto
+        margin: 100px auto
         +_1170
             max-width: 950px
-            margin: 0 auto
+            margin: 100px auto
             +_979
                 width: 95%
 
@@ -128,13 +106,14 @@
         text-decoration: none
         margin-top: 50px
         display: block
-        padding: 16px 0px
-        background: linear-gradient(90deg, #E44D26 0%, #F16529 100%)
+        padding: 16px 0px        
         border-radius: 30px    
         max-width: 264px
         width: 100%
-        &:hover             
-            background: linear-gradient(90deg, #F85032 0%, #E73827 100%)
+        background-color: #F85032
+        transition: background-color .5s
+    &__link:hover         
+        background-color: #0B650B
 
     &__img-footer 
         margin-top: 75px
