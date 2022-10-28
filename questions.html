@@ -40,7 +40,7 @@
     display: none;
   }
 </style>
-<body class="body-questions">
+<body id="startGame" class="body-questions">
 <div class="quesions">
   <div id="quesions__con" class="quesions__container">
     <div id="quiz">
@@ -103,10 +103,10 @@
         { 
           'q': '<img style="position: relative; left: calc(50% - 456px);" src="img/question-one.png"> <br> <p style="font-family: Ghoulish Fright AOE; font-style: normal; font-weight: 400; font-size: 30px; line-height: 106%; text-align: center; text-transform: uppercase; color: #FFFFFF; margin-bottom: 70px;">In what country did Halloween come from?</p> <h3 style="position: absolute; top: -222px; transform: translate(117%, 0px); font-family: Ghoulish Fright AOE; font-style: normal; font-weight: 400; font-size: 70px; line-height: 106%; text-align: center; text-transform: uppercase; background: linear-gradient(90deg, rgba(236, 233, 230, 0.93) 0%, rgba(255, 255, 255, 0.93) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Question 1</h3>',
           'options': [
-            '<p>a) Ireland</p>',
-            '<p>b) australia</p>',
-            '<p>c) germany</p>',
-            '<p>d) netherlands</p>'
+            '<p id="one">a) Ireland</p>',
+            '<p id="two">b) australia</p>',
+            '<p id="three">c) germany</p>',
+            '<p id="four">d) netherlands</p>'
           ],
           'correctIndex': 0,
           'correctResponse': 'Halloween had its origins in the festival of Samhain among the Celts of ancient Britain and Ireland. On the day corresponding to November 1 on contemporary calendars, the new year was believed to begin. That date was considered the beginning of the winter period, the date on which the herds were returned from pasture and land tenures were renewed. During the Samhain festival the souls of those who had died were believed to return to visit their homes, and those who had died during the year were believed to journey to the otherworld. <img class="mobile-1" src="img/question-two.png">',
@@ -115,10 +115,10 @@
         {
           'q': '<img style="position: relative; left: calc(50% - 456px);" src="img/question-three.png"> <br> <p style="font-family: Ghoulish Fright AOE; font-style: normal; font-weight: 400; font-size: 30px; line-height: 106%; text-align: center; text-transform: uppercase; color: #FFFFFF; margin-bottom: 70px;">The pumpkin - lantern everyone makes for Halloween is called Jack`s Lantern. But who is this Jack?</p> <h3 style="position: absolute; top: -222px; transform: translate(113%, 0px); font-family: Ghoulish Fright AOE; font-style: normal; font-weight: 400; font-size: 70px; line-height: 112%; text-align: center; text-transform: uppercase; background: linear-gradient(90deg, rgba(236, 233, 230, 0.93) 0%, rgba(255, 255, 255, 0.93) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Question 2</h3>',
           'options': [
-            '<p>a) PRIEST</p>',
-            '<p>b) Blacksmith</p>',
-            '<p>c) Farmer</p>',
-            '<p>D) Necromancer</p>'
+            '<p id="10">a) PRIEST</p>',
+            '<p id="11">b) Blacksmith</p>',
+            '<p id="12">c) Farmer</p>',
+            '<p id="13">D) Necromancer</p>'
           ],
           'correctIndex': 1,
           'correctResponse': 'People have been making jack-o’-lanterns at Halloween for centuries. The practice originated from an Irish myth about an Irish blacksmith called `Stingy Jack.` According to the story, Stingy Jack invited the Devil to have a drink with him. True to his name, Stingy Jack didn’t want to pay for his drink, so he convinced the Devil to turn himself into a coin that Jack could use to buy their drinks. Once the Devil did so, Jack decided to keep the money and put it into his pocket next to a silver cross, which prevented the Devil from changing back into his original form. <br> <br> <br> Jack eventually freed the Devil, under the condition that he would not bother Jack for one year and that, should Jack die, he would not claim his soul. The next year, Jack again tricked the Devil into climbing into a tree to pick a piece of fruit. While he was up in the tree, Jack carved a sign of the cross into the tree’s bark so that the Devil could not come down until the Devil promised Jack not to bother him for ten more years. <br> <br> <br> Soon after, Jack died. As the legend goes, God would not allow such an unsavory figure into heaven. The Devil, upset by the trick Jack had played on him and keeping his word not to claim his soul, would not allow Jack into hell. He sent Jack off into the dark night with only a burning coal to light his way. Jack put the coal into a carved-out turnip and has been roaming the Earth with ever since. The Irish began to refer to this ghostly figure as “Jack of the Lantern,” and then, simply “Jack O’Lantern.” <img class="mobile-2" src="img/question-foor.png">',
@@ -137,24 +137,24 @@
           'incorrectResponse': '<img style="display: block; margin: 0 auto;" src="img/card-right.png"> <br> <br> <br> <p style="text-align: center;">legend says that Wild Bill Hickock`s hands were holding the AA88 combination when he was shot</p> <img class="mobile-3" src="img/question-three-2.png">'
         },
         {
-          'q': '<img style="position: relative; left: calc(50% - 456px);" src="img/question-foor-1.png"> <br> <p style="font-family: Ghoulish Fright AOE; font-style: normal; font-weight: 400; font-size: 30px; line-height: 106%; text-align: center; text-transform: uppercase; color: #FFFFFF; margin-bottom: 70px;">The pumpkin - lantern everyone makes for Halloween is called Jack`s Lantern. But who is this Jack?</p> <h3 style="position: absolute; top: -222px; transform: translate(113%, 0px); font-family: Ghoulish Fright AOE; font-style: normal; font-weight: 400; font-size: 70px; line-height: 112%; text-align: center; text-transform: uppercase; background: linear-gradient(90deg, rgba(236, 233, 230, 0.93) 0%, rgba(255, 255, 255, 0.93) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Question 4</h3>',
+          'q': '<img style="position: relative; left: calc(50% - 456px);" src="img/question-foor-1.png"> <br> <p style="font-family: Ghoulish Fright AOE; font-style: normal; font-weight: 400; font-size: 30px; line-height: 106%; text-align: center; text-transform: uppercase; color: #FFFFFF; margin-bottom: 70px;">Nowadays almost everyone plays slots from their phone or computer, but previously it could only be done at an offline casino. What is the name of the most popular slot machine in the world?</p> <h3 style="position: absolute; top: -222px; transform: translate(113%, 0px); font-family: Ghoulish Fright AOE; font-style: normal; font-weight: 400; font-size: 70px; line-height: 112%; text-align: center; text-transform: uppercase; background: linear-gradient(90deg, rgba(236, 233, 230, 0.93) 0%, rgba(255, 255, 255, 0.93) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Question 4</h3>',
           'options': [
-            '<p>A) one armed bandit</p>',
-            '<p>B) Big Bertha</p>',
-            '<p>C) jack hammer</p>',
-            '<p>D) liberty bell</p>'
+            '<p id="20">A) one armed bandit</p>',
+            '<p id="21">B) Big Bertha</p>',
+            '<p id="22">C) jack hammer</p>',
+            '<p id="23">D) liberty bell</p>'
           ],
           'correctIndex': 0,
           'correctResponse': '<p style="text-align: center;">Invented in 1898 in San Francisco, the slot machine took almost a century to cross the Atlantic. They were only authorised in France in the late 1980s. More commonly known under their nickname "one-armed bandit", these amusement machines are now undergoing a digital revolution. With the internet, jackpots are sky-high. <br> <br> <br> Is the end nigh for one-armed bandits? Perhaps – at least in their current form. In the future, a tablet could be used as an interface without doing away with the unique thrill of the Slot Machine. In over a century of existence, it has certainly seen its fair share of changes.</p>',
           'incorrectResponse': '<p style="text-align: center;">Invented in 1898 in San Francisco, the slot machine took almost a century to cross the Atlantic. They were only authorised in France in the late 1980s. More commonly known under their nickname "one-armed bandit", these amusement machines are now undergoing a digital revolution. With the internet, jackpots are sky-high. <br> <br> <br> Is the end nigh for one-armed bandits? Perhaps – at least in their current form. In the future, a tablet could be used as an interface without doing away with the unique thrill of the Slot Machine. In over a century of existence, it has certainly seen its fair share of changes.</p>'
         },
         {
-          'q': '<img style="position: relative; left: calc(50% - 456px);" src="img/question-five.png"> <br> <p style="font-family: Ghoulish Fright AOE; font-style: normal; font-weight: 400; font-size: 30px; line-height: 106%; text-align: center; text-transform: uppercase; color: #FFFFFF; margin-bottom: 70px;">In what country did Halloween come from?</p> <h3 style="position: absolute; top: -222px; transform: translate(113%, 0px); font-family: Ghoulish Fright AOE; font-style: normal; font-weight: 400; font-size: 70px; line-height: 106%; text-align: center; text-transform: uppercase; background: linear-gradient(90deg, rgba(236, 233, 230, 0.93) 0%, rgba(255, 255, 255, 0.93) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Question 5</h3>',
+          'q': '<img style="position: relative; left: calc(50% - 456px);" src="img/question-five.png"> <br> <p style="font-family: Ghoulish Fright AOE; font-style: normal; font-weight: 400; font-size: 30px; line-height: 106%; text-align: center; text-transform: uppercase; color: #FFFFFF; margin-bottom: 70px;">Where did the world`s first legal casino come from?</p> <h3 style="position: absolute; top: -222px; transform: translate(113%, 0px); font-family: Ghoulish Fright AOE; font-style: normal; font-weight: 400; font-size: 70px; line-height: 106%; text-align: center; text-transform: uppercase; background: linear-gradient(90deg, rgba(236, 233, 230, 0.93) 0%, rgba(255, 255, 255, 0.93) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Question 5</h3>',
           'options': [
-            '<p>A) usa</p>',
-            '<p>B) france</p>',
-            '<p>C) italy</p>',
-            '<p>D) malta</p>'
+            '<p id="30">A) usa</p>',
+            '<p id="31">B) france</p>',
+            '<p id="32">C) italy</p>',
+            '<p id="33">D) malta</p>'
             ],
           'correctIndex': 2,
           'correctResponse': '<p style="text-align: center">It was in Venice in the mid-17th century that the first legal casino opened. It was called Il Ridotto. <br> <br> <br> It was here in Italy that the term "casino" was created. In Italian, the word means "small house".</p> <img class="mobile-5" src="img/question-five-2.png">',
@@ -162,6 +162,90 @@
         }
       ]
     });
+
+
+    // Start Animation for 1 block of questions
+
+    $('#two').click(function (){
+      $('#one').css("border", "1px solid #098223");
+      $('#one').css("filter", "drop-shadow(0px 1px 1px #098223) drop-shadow(-1px 0px 1px #098223) drop-shadow(1px 0px 1px #098223)");
+    });
+
+    $('#three').click(function (){
+      $('#one').css("border", "1px solid #098223");
+      $('#one').css("filter", "drop-shadow(0px 1px 1px #098223) drop-shadow(-1px 0px 1px #098223) drop-shadow(1px 0px 1px #098223)");
+    });
+
+    $('#four').click(function (){
+      $('#one').css("border", "1px solid #098223");
+      $('#one').css("filter", "drop-shadow(0px 1px 1px #098223) drop-shadow(-1px 0px 1px #098223) drop-shadow(1px 0px 1px #098223)");
+    });
+
+    // Finish Animation for 1 block of questions
+
+
+    // Start Animation for 2 block of questions
+
+    $('#10').click(function (){
+      $('#11').css("border", "1px solid #098223");
+      $('#11').css("filter", "drop-shadow(0px 1px 1px #098223) drop-shadow(-1px 0px 1px #098223) drop-shadow(1px 0px 1px #098223)");
+    });
+
+    $('#12').click(function (){
+      $('#11').css("border", "1px solid #098223");
+      $('#11').css("filter", "drop-shadow(0px 1px 1px #098223) drop-shadow(-1px 0px 1px #098223) drop-shadow(1px 0px 1px #098223)");
+    });
+
+    $('#13').click(function (){
+      $('#11').css("border", "1px solid #098223");
+      $('#11').css("filter", "drop-shadow(0px 1px 1px #098223) drop-shadow(-1px 0px 1px #098223) drop-shadow(1px 0px 1px #098223)");
+    });
+
+    // Finish Animation for 1 block of questions
+
+
+    // Start Animation for 4 block of questions
+
+    $('#21').click(function (){
+      $('#20').css("border", "1px solid #098223");
+      $('#20').css("filter", "drop-shadow(0px 1px 1px #098223) drop-shadow(-1px 0px 1px #098223) drop-shadow(1px 0px 1px #098223)");
+    });
+
+    $('#22').click(function (){
+      $('#20').css("border", "1px solid #098223");
+      $('#20').css("filter", "drop-shadow(0px 1px 1px #098223) drop-shadow(-1px 0px 1px #098223) drop-shadow(1px 0px 1px #098223)");
+    });
+
+    $('#23').click(function (){
+      $('#20').css("border", "1px solid #098223");
+      $('#20').css("filter", "drop-shadow(0px 1px 1px #098223) drop-shadow(-1px 0px 1px #098223) drop-shadow(1px 0px 1px #098223)");
+    });
+
+    // Finish Animation for 4 block of questions
+
+
+
+    // Start Animation for 5 block of questions
+
+    $('#30').click(function (){
+      $('#32').css("border", "1px solid #098223");
+      $('#32').css("filter", "drop-shadow(0px 1px 1px #098223) drop-shadow(-1px 0px 1px #098223) drop-shadow(1px 0px 1px #098223)");
+    });
+
+    $('#31').click(function (){
+      $('#32').css("border", "1px solid #098223");
+      $('#32').css("filter", "drop-shadow(0px 1px 1px #098223) drop-shadow(-1px 0px 1px #098223) drop-shadow(1px 0px 1px #098223)");
+    });
+
+    $('#33').click(function (){
+      $('#32').css("border", "1px solid #098223");
+      $('#32').css("filter", "drop-shadow(0px 1px 1px #098223) drop-shadow(-1px 0px 1px #098223) drop-shadow(1px 0px 1px #098223)");
+    });
+
+    // Finish Animation for 5 block of questions
+
+
+
   </script>
 </body>
 </html>
