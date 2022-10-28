@@ -297,6 +297,10 @@ h1 {
     @media (max-width: 979px) {
       .win h2 {
         margin: 102px auto; } }
+  @media (max-width: 979px) and (max-width: 600px) {
+    .win h2 {
+      margin: 50px auto; } }
+
   .win .win__container {
     max-width: 950px;
     width: 100%;
