@@ -127,8 +127,6 @@ h1 {
   display: block;
   max-width: 260px;
   width: 100%;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
   margin: 0 auto; }
   #quiz-buttons a:hover, .quiz-container .quiz-button:hover {
     background: -webkit-gradient(linear, left top, right top, from(#F85032), to(#E73827));
@@ -563,7 +561,9 @@ h1 {
     display: block;
     max-width: 320px;
     width: 100%;
-    margin: 120px auto; }
+    margin: 120px auto;
+    -webkit-transition: 0.5s;
+    transition: 0.5s; }
     .box .button:hover {
       background: -webkit-gradient(linear, left top, right top, from(#F85032), to(#E73827));
       background: linear-gradient(90deg, #F85032 0%, #E73827 100%);
