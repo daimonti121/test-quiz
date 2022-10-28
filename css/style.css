@@ -219,20 +219,15 @@ h1 {
   position: relative; }
 
 #quesions__img {
-  width: 100%;
-  margin-top: 80px; }
-
-.display-none {
-  display: none; }
-
-.display-block {
-  display: block; }
-  .display-block img {
+  width: 100%; }
+  #quesions__img .display-none {
+    display: none; }
+  #quesions__img .display-block {
     display: block;
+    margin-top: 80px; }
+  #quesions__img img {
+    display: none;
     margin: 0 auto; }
-
-.display-none {
-  display: none; }
 
 @font-face {
   font-family: Ghoulish Fright AOE;
@@ -251,7 +246,7 @@ h1 {
 .win {
   background: url("../img/backgraund-quiz.png") 50% 10%/auto no-repeat;
   background-color: #171616;
-  margin-bottom: 100px; }
+  margin-bottom: 200px; }
   .win h2 {
     display: block;
     margin: 162px auto;

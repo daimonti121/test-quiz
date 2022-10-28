@@ -42,7 +42,7 @@
 </style>
 <body class="body-questions">
 <div class="quesions">
-  <div class="quesions__container">
+  <div id="quesions__con" class="quesions__container">
     <div id="quiz">
       <div id="quiz-header">
         <img src="img/question-back.png">
@@ -55,7 +55,7 @@
       </div>      
     </div>
     <div id="quesions__img" class="display-none">
-      <img src="img/question-back-two.png" alt="item">
+      <img src="img/question-back-two.png" id="img" alt="item">
     </div>
   </div>  
 </div>
@@ -66,17 +66,17 @@
   let allAnswers = 0;
   let correctAnswers = 0; 
 
+  $('.quiz-finish-btn').click(function (e) {
+    console.log("work");
+    $('#quesions__con').css('display', 'none');
+    }
+  );
+
   $('#quiz-start-btn').click(function (e) {
     $('#quesions__img').addClass('display-block');
+    $('#img').addClass('display-block');
     }
-  ),
-
-  $('#quiz-finish-btn').click(function (e) {
-    console.log("work");
-    $('#quesions__img').removeClass('display-block');
-    }
-  ),
-  
+  );
 
   $('#quiz').quiz({
       resultsScreen: '#results-screen',
